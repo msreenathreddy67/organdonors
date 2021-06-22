@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title>Hospitals List page</title>
+    {% endblock %}
+  
+
+    {% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'>
+            {% if Hospital %}
+            <ol>
+                <h1>list of Hospitals</h1>
+                {% for hospital in Hospital %}
+                    
+                    <li><a href='{{hospital.pk}}'>{{hospital}}</a></li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <h1>No Hospitals display</h1>
+        {% endif %}
+    </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title> Hospital page</title>
+    {% endblock %}
+  
+
+    {% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'> 
+            <h1>Display Hospitals Details</h1> 
+            <table border="2px"> 
+                <tr><th>Hname</th> 
+                    <th>HLoc</th> 
+                    <th>AvaliableOrgans</th> 
+                    <th>Contact</th> </tr> 
+                
+                <tr>
+                    <td>{{hospital.Hospital_Name}}</td> 
+                    <td>{{hospital.Hospital_Loc}}</td> 
+                    <td>{{hospital.Avaliable_Organs}}</td> 
+                    <td>{{hospitalt.Contact}}</td> 
+                </tr>
+
+            </table> 
+
+ </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title>patient page</title>
+    {% endblock %}
+  
+
+    {% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'>
+                <h1>Welcome to Patient page</h1>  
+                <a class='nav-link' href="{% url 'pregister' %}">Registration For Organs</a>
+                <a class='nav-link' href="{% url 'donorlist' %}">donorlList</a> 
+            
+                <a class='nav-link' href="{% url 'hospitallist' %}">Hospitals llist</a> 
+                <a class='nav-link' href="{% url 'select_hospital' %}">Select Hospital</a> 
+      
+      
+        </div>
+    </div>
+    {% endblock %} 
+    
+ 
+    

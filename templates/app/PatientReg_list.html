@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title>List page</title>
+    {% endblock %}
+  
+
+    {% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'>
+            {% if patients %}
+            <ol>
+                <h1>list of Patients</h1>
+                {% for patient in patients %}
+                    
+                    <li><a href='{{patient.pk}}'>{{patient}}</a></li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <h1>No patients to display</h1>
+        {% endif %}
+    </div>
+    </div>
+    {% endblock %}

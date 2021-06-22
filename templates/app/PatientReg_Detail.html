@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title> Donors Details page</title>
+    {% endblock %}
+  
+
+    {% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'> 
+            <h1>Display Patients Details</h1> 
+            <table border="2px"> 
+                <tr><th>Pname</th> 
+                    <th>PAge</th> 
+                    <th>PItem</th> 
+                    <th>PPno</th> 
+                    <th>PAddress</th> 
+                    <th>P_HealthCertificate</th> </tr> 
+                
+                <tr>
+                    <td>{{patient.Patient_Name}}</td> 
+                    <td>{{patient.Patient_Age}}</td> 
+                    <td>{{patient.Patient_Item}}</td> 
+                    <td>{{patient.Patientr_Phno}}</td> 
+                    <td>{{patient.Patient_Address}}</td> 
+                    <td>{{patient.Patient_HealthCertificate}}</td> 
+                </tr>
+
+            </table> 
+
+ </div>
+    </div>
+    {% endblock %}

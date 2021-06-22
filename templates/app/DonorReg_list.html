@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title>List page</title>
+    {% endblock %}
+  
+
+    {% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'>
+            {% if donors %}
+            <ol>
+                <h1>list of donors</h1>
+                {% for donor in donors %}
+                    
+                    <li><a href='{{donor.pk}}'>{{donor}}</a></li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <h1>No donors to display</h1>
+        {% endif %}
+    </div>
+    </div>
+    {% endblock %}

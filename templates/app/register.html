@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+
+{% block title %}
+    <title>home page</title>
+    {% endblock %}
+  
+
+    {% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'>
+               <form method="POST" enctype="multipart/form-data"> 
+                   {% csrf_token %} 
+                   {{donorreg.as_p}} 
+                   <br>
+                   <input type="submit" value="Register">
+
+               </form>
+        </div>
+    </div>
+    {% endblock %} 
+    
+ 
+    
